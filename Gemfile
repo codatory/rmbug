@@ -3,6 +3,7 @@ source "http://rubygems.org"
 gem "rails", "3.2.1"
 
 gem "sqlite3"
+gem "mysql2"
 gem "rake"
 gem "devise"
 gem "stamp"
