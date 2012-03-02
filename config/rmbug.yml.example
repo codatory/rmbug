@@ -1,10 +1,10 @@
-# Gitlab application config file
+# Rmbug application config file
 
 # Email used for notification
 # about new issues, comments
 email:
-  from: notify@gitlabhq.com
-  host: gitlabhq.com
+  from: notify@rmbug.com
+  host: rmbug.com
 
 # Git Hosting congiguration
 git_host:

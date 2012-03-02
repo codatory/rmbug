@@ -7,7 +7,7 @@ class ProtectedBranch < ActiveRecord::Base
   after_destroy :update_repository
 
   def update_repository
-    Gitlabhq::GitHost.system.new.configure do |c|
+    Rmbug::GitHost.system.new.configure do |c|
       c.update_project(project.path, project)
     end
   end

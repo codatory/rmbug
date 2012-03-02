@@ -1,4 +1,4 @@
-require File.join(Rails.root, "lib", "gitlabhq", "git_host")
+require File.join(Rails.root, "lib", "rmbug", "git_host")
 
 class Repository
   attr_accessor :project
@@ -44,7 +44,7 @@ class Repository
   end
 
   def url_to_repo
-    Gitlabhq::GitHost.url_to_repo(path)
+    Rmbug::GitHost.url_to_repo(path)
   end
 
   def path_to_repo
@@ -52,7 +52,7 @@ class Repository
   end
 
   def update_repository
-    Gitlabhq::GitHost.system.new.configure do |c|
+    Rmbug::GitHost.system.new.configure do |c|
       c.update_project(path, project)
     end
 
@@ -60,7 +60,7 @@ class Repository
   end
 
   def destroy_repository
-    Gitlabhq::GitHost.system.new.configure do |c|
+    Rmbug::GitHost.system.new.configure do |c|
       c.destroy_project(@project)
     end
   end

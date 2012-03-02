@@ -2,13 +2,13 @@ require 'gitolite'
 require 'timeout'
 require 'fileutils'
 
-module Gitlabhq
+module Rmbug
   class Gitolite
     class AccessDenied < StandardError; end
 
     def pull
       # create tmp dir
-      @local_dir = File.join(Dir.tmpdir,"gitlabhq-gitolite-#{Time.now.to_i}")
+      @local_dir = File.join(Dir.tmpdir,"rmbug-gitolite-#{Time.now.to_i}")
       Dir.mkdir @local_dir
 
       `git clone #{GitHost.admin_uri} #{@local_dir}/gitolite`
@@ -26,7 +26,7 @@ module Gitlabhq
 
     def configure
       status = Timeout::timeout(20) do
-        File.open(File.join(Dir.tmpdir,"gitlabhq-gitolite.lock"), "w+") do |f|
+        File.open(File.join(Dir.tmpdir,"rmbug-gitolite.lock"), "w+") do |f|
           begin 
             f.flock(File::LOCK_EX)
             pull
