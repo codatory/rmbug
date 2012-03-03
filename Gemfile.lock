@@ -5,7 +5,7 @@ GIT
     annotate (2.4.1.beta1)
 
 GIT
-  remote: https://github.com/rmbug/gitolite-client.git
+  remote: https://github.com/gitlabhq/gitolite-client.git
   revision: 36dabd226caa40ff052677719adaacbfe667b36c
   specs:
     gitolite (0.0.3.alpha)
@@ -13,7 +13,7 @@ GIT
       hashery (~> 1.4.0)
 
 GIT
-  remote: https://github.com/rmbug/grit.git
+  remote: https://github.com/gitlabhq/grit.git
   revision: ff015074ef35bd94cba943f9c0f98e161ab5851c
   specs:
     grit (2.4.1)
