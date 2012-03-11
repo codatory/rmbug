@@ -26,7 +26,7 @@ command:
 
 After that, run the following, while replacing domain.com with the domain/subdomain where you
 intend to host rmBug, mysql_root with desired mysql root password, and rmbug_pass with the
-desired password for rmug mysql user.
+desired password for rmbug mysql user.
 
 	bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_ubuntu1110.sh`" domain.com mysql_root rmbug_pass
 	
