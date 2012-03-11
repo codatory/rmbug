@@ -17,7 +17,7 @@ We tried to make the process of contributing as painless as possible, while pres
 the quality of contributions and project health. Documentation that you might want to
 read before contributing can be found [here](https://github.com/mario/rmbug/tree/master/doc).
 
-## How do I install rmBug for production on Ubuntu 11.10?
+## How do I install rmBug for production on Ubuntu 11.10 or Debian 6?
 
 Before running the magical command, you might want to install curl and nano by issuing the following
 command:
@@ -25,9 +25,14 @@ command:
 	sudo apt-get install -y curl nano
 
 After that, run the following, while replacing domain.com with the domain/subdomain where you
-intend to host rmBug:
+intend to host rmBug, mysql_root with desired mysql root password, and rmbug_pass with the
+desired password for rmug mysql user.
 
-	bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_ubuntu1110.sh`" domain.com
+	bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_ubuntu1110.sh`" domain.com mysql_root rmbug_pass
+	
+Installation on Debian 6 is very similar - you just need to issue the following command:
+
+  bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_debian6.sh`" domain.com mysql_root rmbug_pass
 
 ## IRC
 
