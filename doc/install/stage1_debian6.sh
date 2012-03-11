@@ -20,9 +20,8 @@ apt-get install -y wget curl gcc checkinstall libxml2-dev libxslt-dev sqlite3 li
 
 apt-get install -y openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libyaml-dev libxml2-dev libxslt-dev autoconf ncurses-dev automake libtool bison subversion
 
-sudo debconf-set-selections <<< 'mysql-server-5.1 mysql-server/root_password password $2'
-sudo debconf-set-selections <<< 'mysql-server-5.1 mysql-server/root_password_again password $2'
-sudo apt-get -y install mysql-server
+DEBIAN_FRONTEND=noninteractive sudo apt-get -y install mysql-server
+mysqladmin -u root password $2
 mysql -uroot -p$2 -e "$SQL"
 
 apt-get install -y python-dev python-pip libicu-dev
