@@ -16,3 +16,4 @@ Vagrantfile
 .vagrant
 config/*.yml
 config/unicorn.conf.rb
+*~
