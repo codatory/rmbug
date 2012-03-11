@@ -20,7 +20,7 @@ apt-get install -y wget curl gcc checkinstall libxml2-dev libxslt-dev sqlite3 li
 
 apt-get install -y openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libyaml-dev libxml2-dev libxslt-dev autoconf ncurses-dev automake libtool bison subversion
 
-DEBIAN_FRONTEND=noninteractive sudo apt-get -y install mysql-server
+DEBIAN_FRONTEND=noninteractive sudo aptitude -y install mysql-server
 mysqladmin -u root password $2
 mysql -uroot -p$2 -e "$SQL"
 
