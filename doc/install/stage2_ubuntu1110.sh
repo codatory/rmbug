@@ -23,6 +23,7 @@ mv rmbug.yml.example rmbug.yml
 sed -i -e 's/rmbug.com/$1/g' rmbug.yml
 # Change things you might need to change in rmbug.yml
 mv database.yml.example database.yml
+sed -i -e 's/example/$2/g' database.yml
 mv unicorn.conf.rb.example unicorn.conf.rb
 # Change things you might want/need to change
 cd ..
