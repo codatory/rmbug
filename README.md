@@ -32,7 +32,7 @@ desired password for rmug mysql user.
 	
 Installation on Debian 6 is very similar - you just need to issue the following command:
 
-  bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_debian6.sh`" domain.com mysql_root rmbug_pass
+	bash -c "`curl https://raw.github.com/mario/rmbug/master/doc/install/stage1_debian6.sh`" domain.com mysql_root rmbug_pass
 
 ## IRC
 
