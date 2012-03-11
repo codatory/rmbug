@@ -3,8 +3,8 @@
 # 2 argument - mysql root pass
 # 3 argument - rmbug mysql user pass
 
-Q1="CREATE DATABASE IF NOT EXISTS $1;"
-Q2="GRANT ALL ON *.* TO '$2'@'localhost' IDENTIFIED BY '$3';"
+Q1="CREATE DATABASE IF NOT EXISTS rmbug_production;"
+Q2="GRANT ALL ON *.* TO 'rmbug'@'localhost' IDENTIFIED BY '$3';"
 Q3="FLUSH PRIVILEGES;"
 SQL="${Q1}${Q2}${Q3}"
 
