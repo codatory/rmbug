@@ -2,7 +2,7 @@
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> /home/rmbug/.bashrc
 
-source .profile
+source /home/rmbug/.rvm/scripts/rvm
 rvm install 1.9.3
 rvm use 1.9.3 --default
 
